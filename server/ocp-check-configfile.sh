@@ -3,9 +3,10 @@
 if [ -z "$CONFIG_FILE" ]; then
   echo "CONFIG_FILE env isn't defined";
   exit;
-fi
+fi;
 
-if -f "$CONFIG_FILE.json" -o -f "$CONFIG_FILE" ; then
+if [ -f "$CONFIG_FILE.json" -o -f "$CONFIG_FILE" ];
+then
   echo "$CONFIG_FILE file exists";
 else
   echo "Creating a $CONFIG_FILE file based on sample";
