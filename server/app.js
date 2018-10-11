@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
-const config = require('./config')
+const config = require(process.env.CONFIG_FILE || './config')
 const bodyParser = require('body-parser');
 const jsonfile = require('jsonfile')
 
